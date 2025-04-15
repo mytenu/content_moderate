@@ -1,2 +1,4 @@
-python=3.9
-tensorflow==2.15
+streamlit
+tensorflow
+pillow
+numpy

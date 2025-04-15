@@ -6,6 +6,13 @@ import io
 import base64
 from datetime import datetime
 
+
+# Set page config
+st.set_page_config(page_title="Sticker Moderation Chat", layout="centered")
+st.title("🛡️ Sticker Moderation Chat")
+
+
+
 # Load the CNN model
 @st.cache_resource
 def load_model():
@@ -39,9 +46,7 @@ def base64_to_image(b64_string: str) -> Image.Image:
 def timestamp() -> str:
     return datetime.now().strftime("%H:%M")
 
-# Set page config
-st.set_page_config(page_title="Sticker Moderation Chat", layout="centered")
-st.title("🛡️ Sticker Moderation Chat")
+
 
 # Initialize chat history
 if 'chat_history' not in st.session_state:
